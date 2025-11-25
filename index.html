@@ -14,10 +14,13 @@
             max-width:420px; 
             margin-bottom:40px; 
             border-radius: 50%; 
-            padding:20px;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 40px rgba(255,255,255,0.3);
+            padding: 10px; 
+            background: rgba(255,255,255,0.05); 
+            backdrop-filter: blur(5px); 
+            border: 1px solid rgba(255,255,255,0.1); 
+            image-rendering: -webkit-optimize-contrast; 
+            image-rendering: crisp-edges; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5); 
         }
         .whatsapp { background:#25D366; color:white; padding:20px 70px; border-radius:60px; text-decoration:none; font-size:1.8rem; display:inline-block; margin:40px 10px; font-weight:bold; box-shadow: 0 10px 30px rgba(37,211,102,0.5); transition:0.3s; }
         .whatsapp:hover { transform:scale(1.05); }
@@ -25,7 +28,7 @@
         .direccion { font-size:1.4rem; opacity:0.9; line-height:1.7; }
         @media (max-width:768px){ 
             h1{font-size:3.2rem;} 
-            .logo{max-width:280px; padding:15px;} 
+            .logo{max-width:280px; padding:8px;} 
             .whatsapp{font-size:1.5rem; padding:16px 50px;} 
             .telefono{font-size:1.7rem;}
         }
