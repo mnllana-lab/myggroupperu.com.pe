@@ -5,88 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M & G GROUP DEL PERU S.A.C.</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+        body { 
+            font-family: 'Helvetica Neue', Arial, sans-serif; 
+            background-color: #e9ecef; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
         }
-        .card {
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            padding: 40px;
-            text-align: center;
-            max-width: 400px;
-            width: 90%;
+        .card { 
+            background: white; 
+            padding: 50px 40px; 
+            border-radius: 25px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15); 
+            text-align: center; 
+            max-width: 500px; /* Aumentamos el ancho */
+            width: 85%; 
+            border-top: 8px solid #1a2a6c; /* Detalle elegante arriba */
         }
-        .logo {
-            max-width: 180px; /* Tamaño ajustado para balance profesional */
+        .logo { 
+            max-width: 220px; /* Logo más grande */
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 30px; 
         }
-        h1 {
-            color: #2c3e50;
-            font-size: 22px;
-            margin-bottom: 10px;
+        h1 { 
+            color: #1a2a6c; 
+            font-size: 26px; /* Texto más grande */
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        p {
-            color: #7f8c8d;
-            margin-bottom: 30px;
+        p { 
+            color: #444; 
+            font-size: 18px; 
+            margin-bottom: 35px;
+            line-height: 1.5;
         }
         .btn-container {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
-        .btn {
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: all 0.3s ease;
+        .btn { 
+            text-decoration: none; 
+            padding: 18px; 
+            border-radius: 12px; 
+            font-weight: bold; 
+            font-size: 16px;
+            transition: 0.3s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
-        .btn-info {
-            background-color: #2980b9;
-            color: white;
-        }
-        .btn-info:hover {
-            background-color: #1f6391;
-        }
-        .btn-ops {
-            background-color: #27ae60;
-            color: white;
-        }
-        .btn-ops:hover {
-            background-color: #1e8449;
-        }
-        .footer {
-            margin-top: 30px;
-            font-size: 12px;
-            color: #bdc3c7;
-        }
+        .btn-info { background-color: #1a2a6c; color: white; }
+        .btn-ops { background-color: #28a745; color: white; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); opacity: 0.9; }
+        .footer { margin-top: 40px; font-size: 13px; color: #888; border-top: 1px solid #eee; pt-20: 20px; padding-top: 20px; }
     </style>
 </head>
 <body>
-
     <div class="card">
-        <img src="logo.png" alt="M & G GROUP Logo" class="logo">
-        
+        <img src="logo.png" alt="M & G GROUP" class="logo">
         <h1>M & G GROUP DEL PERU S.A.C.</h1>
-        <p>Soluciones integrales en ingeniería y construcción.</p>
-
+        <p>Expertos en Ingeniería, Construcción y Soluciones Integrales</p>
+        
         <div class="btn-container">
-            <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📧 Contactar con Información</a>
+            <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📧 Escribir a Información</a>
             <a href="mailto:operaciones@mg-group.com.pe" class="btn btn-ops">⚙️ Área de Operaciones</a>
         </div>
 
         <div class="footer">
-            &copy; 2025 M & G GROUP DEL PERU S.A.C. <br> Todos los derechos reservados.
+            📍 Lima, Perú <br>
+            <strong>M & G GROUP DEL PERU S.A.C.</strong><br>
+            &copy; 2025 Todos los derechos reservados.
         </div>
     </div>
-
 </body>
 </html>
