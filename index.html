@@ -5,48 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M & G GROUP DEL PERU S.A.C.</title>
     <style>
+        /* Eliminamos cualquier espacio sobrante */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body { 
-            font-family: 'Segoe UI', Tahoma, sans-serif; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
             background-color: #f0f2f5; 
-            /* Quitamos el centrado total para que la tarjeta mande */
-            display: block; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
         }
 
-        .header-stripe { 
+        /* Una sola pieza que contiene todo */
+        .main-strip { 
             background: #ffffff; 
-            padding: 40px 5%; 
-            width: 100%; /* OCUPA EL 100% DE LA PANTALLA */
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1); 
-            border-bottom: 15px solid #1a2a6c;
+            width: 100%; /* Ancho total de lado a lado */
+            padding: 40px 5%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            border-top: 10px solid #1a2a6c;
+            border-bottom: 10px solid #1a2a6c;
             text-align: center;
         }
 
         .logo { 
-            width: 300px; 
+            width: 250px; 
             height: auto;
             margin-bottom: 20px; 
         }
 
         h1 { 
             color: #1a2a6c; 
-            font-size: clamp(24px, 5vw, 45px); 
-            margin-bottom: 10px;
+            font-size: clamp(22px, 4vw, 38px); 
+            margin-bottom: 5px;
             text-transform: uppercase;
         }
 
         p { 
             color: #444; 
-            font-size: clamp(18px, 2.5vw, 26px); 
-            margin-bottom: 40px;
+            font-size: clamp(16px, 2vw, 22px); 
+            margin-bottom: 30px;
         }
 
-        /* Contenedor de botones a todo lo ancho */
+        /* Botones alineados horizontalmente */
         .btn-container {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             flex-wrap: wrap;
             max-width: 1200px;
             margin: 0 auto;
@@ -54,49 +59,48 @@
 
         .btn { 
             text-decoration: none; 
-            padding: 22px 40px; 
-            border-radius: 12px; 
+            padding: 18px 30px; 
+            border-radius: 8px; 
             font-weight: bold; 
-            font-size: 20px; 
+            font-size: 18px; 
             transition: 0.3s;
             flex: 1; 
-            min-width: 320px;
+            min-width: 280px;
+            max-width: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            gap: 10px;
         }
 
         .btn-info { background-color: #1a2a6c; color: white; }
         .btn-ops { background-color: #28a745; color: white; }
 
-        .btn:hover { transform: scale(1.02); filter: brightness(1.1); }
+        .btn:hover { filter: brightness(1.2); transform: scale(1.02); }
 
-        .footer { 
-            margin-top: 50px; 
-            padding-bottom: 20px;
-            font-size: 16px; 
-            color: #777;
-            text-align: center;
+        .footer-info { 
+            margin-top: 25px; 
+            font-size: 14px; 
+            color: #666;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="header-stripe">
+    <div class="main-strip">
         <img src="logo.png" alt="M & G GROUP" class="logo">
         
         <h1>M & G GROUP DEL PERU S.A.C.</h1>
-        <p>Expertos en Ingeniería, Construcción y Soluciones Integrales</p>
+        <p>Ingeniería, Construcción y Soluciones Integrales</p>
         
         <div class="btn-container">
             <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📧 info@mg-group.com.pe</a>
             <a href="mailto:operaciones@mg-group.com.pe" class="btn btn-ops">⚙️ operaciones@mg-group.com.pe</a>
         </div>
-    </div>
 
-    <div class="footer">
-        <strong>RUC: 20606041040</strong> | Lima, Perú &copy; 2025
+        <div class="footer-info">
+            RUC: 20606041040 | Lima, Perú &copy; 2025
+        </div>
     </div>
 </body>
 </html>
