@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M & G GROUP DEL PERU S.A.C.</title>
     <style>
-        /* Fondo de la página */
+        /* Reset y centrado total */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body { 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            background-color: #ebedef; 
-            margin: 0; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background-color: #f4f7f9; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
@@ -17,69 +18,73 @@
             padding: 20px;
         }
 
-        /* La Tarjeta */
+        /* Tarjeta que se adapta al ancho de pantalla */
         .card { 
             background: #ffffff; 
-            padding: 60px 50px; 
-            border-radius: 30px; 
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15); 
+            padding: 5% 40px; /* Padding porcentual para que crezca */
+            border-radius: 40px; 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12); 
             text-align: center; 
             width: 100%;
-            max-width: 650px; /* Ancho máximo ideal para PC */
-            border-bottom: 12px solid #1a2a6c; /* Línea decorativa abajo */
+            max-width: 800px; /* Ahora es más ancha (antes era 500-600) */
+            border-top: 20px solid #1a2a6c;
         }
 
-        /* El Logo */
+        /* Logo mucho más presente */
         .logo { 
-            width: 80%; /* Ocupa el 80% del ancho de la tarjeta */
-            max-width: 350px; 
+            width: 400px; 
+            max-width: 90%; 
             height: auto;
             margin-bottom: 40px; 
         }
 
-        /* Títulos y textos */
+        /* Textos con tamaños dinámicos (crecen con la pantalla) */
         h1 { 
             color: #1a2a6c; 
-            font-size: clamp(24px, 5vw, 36px); /* Tamaño fluido según pantalla */
-            margin-bottom: 15px;
-            font-weight: 800;
+            font-size: 2.5rem; /* Tamaño grande y legible */
+            margin-bottom: 20px;
+            font-weight: 900;
+            line-height: 1.2;
         }
 
         p { 
-            color: #444; 
-            font-size: clamp(18px, 3vw, 22px); 
-            margin-bottom: 45px;
-            line-height: 1.4;
+            color: #555; 
+            font-size: 1.5rem; /* Párrafo más grande */
+            margin-bottom: 50px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* Botones */
+        /* Botones grandes y fáciles de presionar */
         .btn { 
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none; 
-            padding: 22px; 
-            margin-bottom: 20px;
-            border-radius: 15px; 
+            padding: 25px; 
+            margin: 20px 0;
+            border-radius: 20px; 
             font-weight: bold; 
-            font-size: 20px; 
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            font-size: 1.4rem; 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
 
         .btn-info { background-color: #1a2a6c; color: white; }
         .btn-ops { background-color: #28a745; color: white; }
 
         .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            filter: brightness(1.1);
+            transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
 
-        /* Pie de página */
         .footer { 
-            margin-top: 40px; 
-            font-size: 14px; 
-            color: #888;
-            letter-spacing: 1px;
+            margin-top: 50px; 
+            font-size: 1.1rem; 
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
         }
     </style>
 </head>
@@ -88,14 +93,14 @@
         <img src="logo.png" alt="M & G GROUP" class="logo">
         
         <h1>M & G GROUP DEL PERU S.A.C.</h1>
-        <p>Soluciones integrales en Ingeniería y Construcción</p>
+        <p>Expertos en Ingeniería, Construcción y Soluciones Integrales para Proyectos de Gran Envergadura.</p>
         
-        <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📩 info@mg-group.com.pe</a>
+        <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📧 info@mg-group.com.pe</a>
         <a href="mailto:operaciones@mg-group.com.pe" class="btn btn-ops">⚙️ operaciones@mg-group.com.pe</a>
         
         <div class="footer">
             <strong>RUC: 20606041040</strong><br>
-            Lima, Perú &copy; 2025
+            Lima, Perú | 2025
         </div>
     </div>
 </body>
