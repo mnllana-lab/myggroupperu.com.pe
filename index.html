@@ -6,8 +6,8 @@
     <title>M & G GROUP DEL PERU S.A.C.</title>
     <style>
         body { 
-            font-family: 'Helvetica Neue', Arial, sans-serif; 
-            background-color: #e9ecef; 
+            font-family: 'Arial', sans-serif; 
+            background-color: #f4f4f9; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
@@ -16,53 +16,42 @@
         }
         .card { 
             background: white; 
-            padding: 50px 40px; 
-            border-radius: 25px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15); 
+            padding: 60px; /* Más espacio interno */
+            border-radius: 30px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
             text-align: center; 
-            max-width: 500px; /* Aumentamos el ancho */
-            width: 85%; 
-            border-top: 8px solid #1a2a6c; /* Detalle elegante arriba */
+            max-width: 700px; /* ¡Mucho más ancha! */
+            width: 90%; 
+            border-top: 10px solid #1a2a6c;
         }
         .logo { 
-            max-width: 220px; /* Logo más grande */
+            width: 300px; /* Logo bastante más grande */
             height: auto;
-            margin-bottom: 30px; 
+            margin-bottom: 40px; 
         }
         h1 { 
             color: #1a2a6c; 
-            font-size: 26px; /* Texto más grande */
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 35px; /* Título gigante */
+            margin-bottom: 20px;
         }
         p { 
-            color: #444; 
-            font-size: 18px; 
-            margin-bottom: 35px;
-            line-height: 1.5;
-        }
-        .btn-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+            color: #333; 
+            font-size: 22px; /* Párrafo más grande */
+            margin-bottom: 40px;
         }
         .btn { 
+            display: block;
             text-decoration: none; 
-            padding: 18px; 
-            border-radius: 12px; 
+            padding: 25px; /* Botones más altos */
+            margin: 15px 0;
+            border-radius: 15px; 
             font-weight: bold; 
-            font-size: 16px;
+            font-size: 20px; /* Letra de botones más grande */
             transition: 0.3s; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
         }
         .btn-info { background-color: #1a2a6c; color: white; }
         .btn-ops { background-color: #28a745; color: white; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); opacity: 0.9; }
-        .footer { margin-top: 40px; font-size: 13px; color: #888; border-top: 1px solid #eee; pt-20: 20px; padding-top: 20px; }
+        .footer { margin-top: 50px; font-size: 16px; color: #777; }
     </style>
 </head>
 <body>
@@ -70,16 +59,11 @@
         <img src="logo.png" alt="M & G GROUP" class="logo">
         <h1>M & G GROUP DEL PERU S.A.C.</h1>
         <p>Expertos en Ingeniería, Construcción y Soluciones Integrales</p>
-        
-        <div class="btn-container">
-            <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📧 Escribir a Información</a>
-            <a href="mailto:operaciones@mg-group.com.pe" class="btn btn-ops">⚙️ Área de Operaciones</a>
-        </div>
-
+        <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📧 Escribir a Información</a>
+        <a href="mailto:operaciones@mg-group.com.pe" class="btn btn-ops">⚙️ Área de Operaciones</a>
         <div class="footer">
-            📍 Lima, Perú <br>
             <strong>M & G GROUP DEL PERU S.A.C.</strong><br>
-            &copy; 2025 Todos los derechos reservados.
+            &copy; 2025 | Lima, Perú
         </div>
     </div>
 </body>
