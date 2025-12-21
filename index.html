@@ -8,114 +8,95 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
             background-color: #f0f2f5; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh;
-            padding: 20px;
+            /* Quitamos el centrado total para que la tarjeta mande */
+            display: block; 
         }
 
-        .card { 
+        .header-stripe { 
             background: #ffffff; 
-            /* ALTURA REDUCIDA Y ANCHO MÁXIMO */
-            padding: 30px 60px; 
-            border-radius: 15px; 
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1); 
-            
-            /* ESTO FUERZA EL FORMATO HORIZONTAL LARGO */
-            width: 98vw; /* 98% del ancho de la pantalla */
-            max-width: 1400px; /* Muy ancho para monitores grandes */
-            
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-bottom: 8px solid #1a2a6c;
+            padding: 40px 5%; 
+            width: 100%; /* OCUPA EL 100% DE LA PANTALLA */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1); 
+            border-bottom: 15px solid #1a2a6c;
+            text-align: center;
         }
 
         .logo { 
-            width: 220px; /* Logo más pequeño para no empujar hacia abajo */
+            width: 300px; 
             height: auto;
-            margin-bottom: 15px; 
+            margin-bottom: 20px; 
         }
 
         h1 { 
             color: #1a2a6c; 
-            font-size: clamp(20px, 4vw, 35px); 
-            margin-bottom: 5px;
-            white-space: nowrap; /* Evita que el nombre se rompa en dos líneas */
+            font-size: clamp(24px, 5vw, 45px); 
+            margin-bottom: 10px;
+            text-transform: uppercase;
         }
 
         p { 
-            color: #555; 
-            font-size: clamp(14px, 2vw, 20px); 
-            margin-bottom: 25px;
-            font-weight: 500;
+            color: #444; 
+            font-size: clamp(18px, 2.5vw, 26px); 
+            margin-bottom: 40px;
         }
 
-        /* BOTONES EN LADO A LADO PARA REFORZAR EL RECTÁNGULO */
+        /* Contenedor de botones a todo lo ancho */
         .btn-container {
             display: flex;
-            flex-direction: row; /* Fuerza horizontal */
-            gap: 20px;
-            width: 100%;
             justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .btn { 
             text-decoration: none; 
-            padding: 15px 30px; 
-            border-radius: 8px; 
+            padding: 22px 40px; 
+            border-radius: 12px; 
             font-weight: bold; 
-            font-size: 16px; 
+            font-size: 20px; 
             transition: 0.3s;
-            flex: 0 1 350px; /* No crecen demasiado pero mantienen el orden */
-            text-align: center;
+            flex: 1; 
+            min-width: 320px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .btn-info { background-color: #1a2a6c; color: white; }
         .btn-ops { background-color: #28a745; color: white; }
 
-        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
+        .btn:hover { transform: scale(1.02); filter: brightness(1.1); }
 
         .footer { 
-            margin-top: 25px; 
-            font-size: 13px; 
-            color: #aaa;
-            width: 100%;
-            text-align: right; /* Info legal a un ladito */
-            border-top: 1px solid #eee;
-            padding-top: 10px;
-        }
-
-        /* Ajuste para celulares (se vuelven uno sobre otro solo si es muy pequeño) */
-        @media (max-width: 768px) {
-            .btn-container { flex-direction: column; align-items: center; }
-            .btn { width: 100%; }
-            h1 { white-space: normal; text-align: center; }
+            margin-top: 50px; 
+            padding-bottom: 20px;
+            font-size: 16px; 
+            color: #777;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="card">
+    <div class="header-stripe">
         <img src="logo.png" alt="M & G GROUP" class="logo">
         
         <h1>M & G GROUP DEL PERU S.A.C.</h1>
-        <p>Servicios de Ingeniería y Construcción</p>
+        <p>Expertos en Ingeniería, Construcción y Soluciones Integrales</p>
         
         <div class="btn-container">
             <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📧 info@mg-group.com.pe</a>
             <a href="mailto:operaciones@mg-group.com.pe" class="btn btn-ops">⚙️ operaciones@mg-group.com.pe</a>
         </div>
-        
-        <div class="footer">
-            RUC: 20606041040 | Lima, Perú &copy; 2025
-        </div>
+    </div>
+
+    <div class="footer">
+        <strong>RUC: 20606041040</strong> | Lima, Perú &copy; 2025
     </div>
 </body>
 </html>
