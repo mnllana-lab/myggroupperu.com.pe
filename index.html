@@ -5,23 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M & G GROUP DEL PERU S.A.C.</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f0f2f5; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-        .card { background: white; padding: 50px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; width: 90%; max-width: 600px; border-top: 10px solid #1a2a6c; }
-        .logo { width: 280px; height: auto; margin-bottom: 30px; }
-        h1 { color: #1a2a6c; font-size: 30px; margin-bottom: 15px; }
-        p { color: #333; font-size: 20px; margin-bottom: 30px; }
-        .btn { display: block; text-decoration: none; padding: 20px; margin: 15px 0; border-radius: 12px; font-weight: bold; font-size: 18px; transition: 0.3s; }
+        /* Fondo de la página */
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background-color: #ebedef; 
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* La Tarjeta */
+        .card { 
+            background: #ffffff; 
+            padding: 60px 50px; 
+            border-radius: 30px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15); 
+            text-align: center; 
+            width: 100%;
+            max-width: 650px; /* Ancho máximo ideal para PC */
+            border-bottom: 12px solid #1a2a6c; /* Línea decorativa abajo */
+        }
+
+        /* El Logo */
+        .logo { 
+            width: 80%; /* Ocupa el 80% del ancho de la tarjeta */
+            max-width: 350px; 
+            height: auto;
+            margin-bottom: 40px; 
+        }
+
+        /* Títulos y textos */
+        h1 { 
+            color: #1a2a6c; 
+            font-size: clamp(24px, 5vw, 36px); /* Tamaño fluido según pantalla */
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        p { 
+            color: #444; 
+            font-size: clamp(18px, 3vw, 22px); 
+            margin-bottom: 45px;
+            line-height: 1.4;
+        }
+
+        /* Botones */
+        .btn { 
+            display: block;
+            text-decoration: none; 
+            padding: 22px; 
+            margin-bottom: 20px;
+            border-radius: 15px; 
+            font-weight: bold; 
+            font-size: 20px; 
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
         .btn-info { background-color: #1a2a6c; color: white; }
         .btn-ops { background-color: #28a745; color: white; }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            filter: brightness(1.1);
+        }
+
+        /* Pie de página */
+        .footer { 
+            margin-top: 40px; 
+            font-size: 14px; 
+            color: #888;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 <body>
     <div class="card">
-        <img src="logo.png" alt="Logo" class="logo">
+        <img src="logo.png" alt="M & G GROUP" class="logo">
+        
         <h1>M & G GROUP DEL PERU S.A.C.</h1>
-        <p>Ingeniería y Construcción</p>
-        <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📧 info@mg-group.com.pe</a>
+        <p>Soluciones integrales en Ingeniería y Construcción</p>
+        
+        <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📩 info@mg-group.com.pe</a>
         <a href="mailto:operaciones@mg-group.com.pe" class="btn btn-ops">⚙️ operaciones@mg-group.com.pe</a>
+        
+        <div class="footer">
+            <strong>RUC: 20606041040</strong><br>
+            Lima, Perú &copy; 2025
+        </div>
     </div>
 </body>
 </html>
