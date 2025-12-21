@@ -3,47 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M&G Group de Perú SAC - División Construcción</title>
+    <title>M & G GROUP DEL PERU S.A.C.</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
-        body, html { margin:0; padding:0; height:100%; background: linear-gradient(135deg, #0d1b2a 0%, #000000 100%); color:#fff; font-family:'Roboto',sans-serif; display:flex; align-items:center; justify-content:center; text-align:center; }
-        .contenedor { max-width:90%; padding:20px; }
-        h1 { font-family:'Montserrat',sans-serif; font-size:5.5rem; margin:30px 0 10px; text-shadow: 0 0 30px rgba(255,255,255,0.5); }
-        p { font-size:1.5rem; margin:15px 0; }
-        .logo { 
-            max-width:420px; 
-            margin-bottom:40px; 
-            border-radius: 50%; 
-            padding: 10px; 
-            background: rgba(255,255,255,0.05); 
-            backdrop-filter: blur(5px); 
-            border: 1px solid rgba(255,255,255,0.1); 
-            image-rendering: -webkit-optimize-contrast; 
-            image-rendering: crisp-edges; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5); 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        .whatsapp { background:#25D366; color:white; padding:20px 70px; border-radius:60px; text-decoration:none; font-size:1.8rem; display:inline-block; margin:40px 10px; font-weight:bold; box-shadow: 0 10px 30px rgba(37,211,102,0.5); transition:0.3s; }
-        .whatsapp:hover { transform:scale(1.05); }
-        .telefono { font-size:2.2rem; margin:30px 0; font-weight:bold; }
-        .direccion { font-size:1.4rem; opacity:0.9; line-height:1.7; }
-        @media (max-width:768px){ 
-            h1{font-size:3.2rem;} 
-            .logo{max-width:280px; padding:8px;} 
-            .whatsapp{font-size:1.5rem; padding:16px 50px;} 
-            .telefono{font-size:1.7rem;}
+        .card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        .logo {
+            max-width: 180px; /* Tamaño ajustado para balance profesional */
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-info {
+            background-color: #2980b9;
+            color: white;
+        }
+        .btn-info:hover {
+            background-color: #1f6391;
+        }
+        .btn-ops {
+            background-color: #27ae60;
+            color: white;
+        }
+        .btn-ops:hover {
+            background-color: #1e8449;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #bdc3c7;
         }
     </style>
 </head>
 <body>
-    <div class="contenedor">
-        <img src="logo.png" class="logo" alt="M&G Group de Perú SAC">
-        <h1>PRÓXIMAMENTE</h1>
-        <p>Estamos construyendo nuestra nueva página web</p>
-        <p class="telefono">956 094 596</p>
-        <p class="direccion">Av. Juan Velasco Alvarado 647<br>Santa Anita, Lima - Perú</p>
-        <a href="https://wa.me/51956094596" class="whatsapp" target="_blank">
-            WhatsApp
-        </a>
+
+    <div class="card">
+        <img src="logo.png" alt="M & G GROUP Logo" class="logo">
+        
+        <h1>M & G GROUP DEL PERU S.A.C.</h1>
+        <p>Soluciones integrales en ingeniería y construcción.</p>
+
+        <div class="btn-container">
+            <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📧 Contactar con Información</a>
+            <a href="mailto:operaciones@mg-group.com.pe" class="btn btn-ops">⚙️ Área de Operaciones</a>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 M & G GROUP DEL PERU S.A.C. <br> Todos los derechos reservados.
+        </div>
     </div>
+
 </body>
 </html>
