@@ -8,84 +8,80 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body { 
-            font-family: 'Arial', sans-serif; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             background-color: #f0f2f5; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
             min-height: 100vh;
-            padding: 10px;
+            padding: 20px;
         }
 
         .card { 
             background: #ffffff; 
-            /* REDUCIMOS EL ALTO: Bajamos de 80px a 25px arriba y abajo */
-            padding: 25px 40px; 
-            border-radius: 25px; 
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15); 
+            padding: 40px 60px; /* Menos alto, más ancho interno */
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
             text-align: center; 
             
-            /* MAXIMIZAMOS EL ANCHO: Ocupará hasta 1100px en pantallas grandes */
-            width: 98%; 
-            max-width: 1100px; 
-            
-            border-top: 12px solid #1a2a6c;
+            /* FORMA RECTANGULAR HORIZONTAL */
+            width: 100%; 
+            max-width: 1050px; /* Estiramos el ancho máximo */
+            border-left: 15px solid #1a2a6c; /* Franja lateral de marca */
         }
 
         .logo { 
-            width: 280px; /* Tamaño equilibrado para no estirar el alto */
+            width: 250px; 
             height: auto;
-            margin-bottom: 15px; 
+            margin-bottom: 20px; 
         }
 
         h1 { 
             color: #1a2a6c; 
-            font-size: clamp(24px, 4vw, 38px); 
-            margin-bottom: 8px;
-            text-transform: uppercase;
+            font-size: 32px; 
+            margin-bottom: 10px;
+            letter-spacing: 1px;
         }
 
         p { 
-            color: #444; 
-            font-size: clamp(16px, 2vw, 22px); 
-            margin-bottom: 25px;
+            color: #555; 
+            font-size: 20px; 
+            margin-bottom: 35px;
         }
 
-        /* Botones en una sola fila en PC para ahorrar espacio vertical */
+        /* Botones en línea para reforzar el efecto horizontal */
         .btn-container {
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
             justify-content: center;
+            flex-wrap: wrap; /* Se ponen uno abajo del otro solo en celular */
         }
 
         .btn { 
             text-decoration: none; 
-            padding: 18px 25px; 
-            border-radius: 12px; 
+            padding: 18px 40px; 
+            border-radius: 10px; 
             font-weight: bold; 
             font-size: 18px; 
             transition: 0.3s;
-            flex: 1; 
-            min-width: 250px;
-            max-width: 400px;
+            min-width: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
         }
 
-        .btn-info { background-color: #1a2a6c; color: white; }
-        .btn-ops { background-color: #28a745; color: white; }
+        .btn-info { background-color: #1a2a6c; color: white; border: 2px solid #1a2a6c; }
+        .btn-ops { background-color: #ffffff; color: #28a745; border: 2px solid #28a745; }
 
-        .btn:hover { filter: brightness(1.1); transform: translateY(-2px); }
+        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
 
         .footer { 
-            margin-top: 25px; 
+            margin-top: 35px; 
             font-size: 14px; 
-            color: #888;
-            padding-top: 15px;
+            color: #999;
             border-top: 1px solid #eee;
+            padding-top: 20px;
         }
     </style>
 </head>
