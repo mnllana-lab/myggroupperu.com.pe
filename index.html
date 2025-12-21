@@ -5,104 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M & G GROUP DEL PERU S.A.C.</title>
     <style>
-        /* Reset para evitar divisiones */
+        /* Eliminamos márgenes para que encaje exacto */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-            background-color: #f0f2f5; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f4f7f9; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
-            min-height: 100vh;
-            padding: 10px;
+            width: 100vw;
+            height: 100vh; /* Ocupa exactamente el alto de la pantalla */
+            overflow: hidden; /* Evita el scroll innecesario */
         }
 
-        /* CAJA ÚNICA: Aquí se une todo para que no se parta */
-        .master-panel { 
+        /* AJUSTE DE ENCAJE PERFECTO */
+        .main-card { 
             background: #ffffff; 
-            width: 98%; /* Casi todo el ancho */
-            max-width: 1100px; 
-            padding: 40px;
+            width: 90vw; /* 90% del ancho de la pantalla */
+            max-width: 1200px; 
+            height: auto;
+            max-height: 85vh; /* No permite que sea más alta que la pantalla */
+            padding: 4vh 5vw; /* Padding basado en el alto y ancho */
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            border-left: 15px solid #1a2a6c; /* Detalle lateral sólido */
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-top: 10px solid #1a2a6c;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
         }
 
         .logo { 
-            width: 280px; 
-            height: auto;
-            margin-bottom: 20px;
-            display: inline-block;
+            height: 15vh; /* El logo se adapta al alto de la pantalla */
+            width: auto;
+            margin-bottom: 3vh;
         }
 
         h1 { 
             color: #1a2a6c; 
-            font-size: clamp(20px, 4vw, 36px); 
-            margin-bottom: 10px;
-            text-transform: uppercase;
+            font-size: clamp(24px, 3.5vw, 45px); 
+            margin-bottom: 1.5vh;
+            line-height: 1.2;
         }
 
         p { 
-            color: #444; 
-            font-size: clamp(16px, 2vw, 22px); 
-            margin-bottom: 35px;
+            color: #555; 
+            font-size: clamp(16px, 1.8vw, 24px); 
+            margin-bottom: 4vh;
+            max-width: 800px;
         }
 
-        /* Botones alineados en una sola fila */
-        .btn-group {
+        /* BOTONES HORIZONTALES */
+        .btn-container {
             display: flex;
-            justify-content: center;
             gap: 20px;
-            flex-wrap: wrap; /* Se ajusta si la pantalla es muy pequeña */
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn { 
             text-decoration: none; 
-            padding: 20px 30px; 
-            border-radius: 10px; 
+            padding: 2vh 30px; 
+            border-radius: 12px; 
             font-weight: bold; 
-            font-size: 18px; 
+            font-size: clamp(14px, 1.2vw, 18px); 
             transition: 0.3s;
-            flex: 1; 
-            min-width: 280px;
-            max-width: 450px;
+            flex: 0 1 350px; 
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .btn-info { background-color: #1a2a6c; color: white; }
         .btn-ops { background-color: #28a745; color: white; }
 
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 
-        /* Footer integrado dentro de la misma caja */
-        .legal-footer { 
-            margin-top: 35px; 
-            padding-top: 20px;
+        .footer { 
+            margin-top: 4vh; 
+            font-size: 0.9rem; 
+            color: #888;
             border-top: 1px solid #eee;
-            font-size: 14px; 
-            color: #777;
+            padding-top: 2vh;
+            width: 100%;
+        }
+
+        /* Ajuste para tablets/celulares */
+        @media (max-width: 768px) {
+            .main-card { height: auto; max-height: none; padding: 40px 20px; }
+            .logo { height: 100px; }
+            .btn-container { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
-    <div class="master-panel">
+    <div class="main-card">
         <img src="logo.png" alt="M & G GROUP" class="logo">
         
         <h1>M & G GROUP DEL PERU S.A.C.</h1>
-        <p>Expertos en Ingeniería, Construcción y Soluciones Integrales</p>
+        <p>Expertos en Ingeniería, Construcción y Soluciones Integrales para proyectos de alta complejidad.</p>
         
-        <div class="btn-group">
+        <div class="btn-container">
             <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📧 info@mg-group.com.pe</a>
             <a href="mailto:operaciones@mg-group.com.pe" class="btn btn-ops">⚙️ operaciones@mg-group.com.pe</a>
         </div>
 
-        <div class="legal-footer">
+        <div class="footer">
             <strong>RUC: 20606041040</strong> | Lima, Perú &copy; 2025
         </div>
     </div>
