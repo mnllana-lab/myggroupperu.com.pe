@@ -5,114 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M & G GROUP DEL PERU S.A.C.</title>
     <style>
-        /* Eliminamos márgenes para que encaje exacto */
+        /* RESET TOTAL: Sin márgenes ni espacios muertos */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #f4f7f9; 
+        body, html { 
+            width: 100%;
+            height: 100%;
+            background-color: #f0f2f5; 
             display: flex; 
             justify-content: center; 
-            align-items: center; 
-            width: 100vw;
-            height: 100vh; /* Ocupa exactamente el alto de la pantalla */
-            overflow: hidden; /* Evita el scroll innecesario */
+            align-items: center;
+            overflow: hidden; /* Evita que aparezcan barras de desplazamiento */
         }
 
-        /* AJUSTE DE ENCAJE PERFECTO */
-        .main-card { 
+        /* EL RECTÁNGULO MAESTRO: Ajustado al 95% de la PC */
+        .full-screen-card { 
             background: #ffffff; 
-            width: 90vw; /* 90% del ancho de la pantalla */
-            max-width: 1200px; 
-            height: auto;
-            max-height: 85vh; /* No permite que sea más alta que la pantalla */
-            padding: 4vh 5vw; /* Padding basado en el alto y ancho */
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            border-top: 10px solid #1a2a6c;
+            width: 95vw;    /* Ocupa el 95% del ancho de la ventana */
+            height: 90vh;   /* Ocupa el 90% del alto de la ventana */
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-evenly; /* Distribuye el contenido a lo largo de todo el alto */
             align-items: center;
-            text-align: center;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border-left: 20px solid #1a2a6c; /* Franja lateral imponente */
+            border-right: 20px solid #1a2a6c; /* Doble franja para equilibrio horizontal */
         }
 
+        /* Logo adaptado al alto de la pantalla */
         .logo { 
-            height: 15vh; /* El logo se adapta al alto de la pantalla */
+            max-height: 25vh; 
             width: auto;
-            margin-bottom: 3vh;
+            max-width: 80%;
         }
 
+        /* Título que se ajusta al ancho */
         h1 { 
             color: #1a2a6c; 
-            font-size: clamp(24px, 3.5vw, 45px); 
-            margin-bottom: 1.5vh;
-            line-height: 1.2;
+            font-size: clamp(30px, 5vw, 60px); 
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 2px;
         }
 
+        /* Subtítulo grande y claro */
         p { 
-            color: #555; 
-            font-size: clamp(16px, 1.8vw, 24px); 
-            margin-bottom: 4vh;
-            max-width: 800px;
+            color: #444; 
+            font-size: clamp(20px, 2.5vw, 35px); 
+            font-weight: 500;
         }
 
-        /* BOTONES HORIZONTALES */
-        .btn-container {
+        /* BOTONES HORIZONTALES GIGANTES */
+        .btn-row {
             display: flex;
-            gap: 20px;
             width: 100%;
+            max-width: 1200px;
             justify-content: center;
-            flex-wrap: wrap;
+            gap: 40px;
         }
 
         .btn { 
             text-decoration: none; 
-            padding: 2vh 30px; 
-            border-radius: 12px; 
+            padding: 30px 40px; 
+            border-radius: 15px; 
             font-weight: bold; 
-            font-size: clamp(14px, 1.2vw, 18px); 
-            transition: 0.3s;
-            flex: 0 1 350px; 
+            font-size: clamp(18px, 1.8vw, 24px); 
+            transition: 0.4s;
+            flex: 1; 
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            gap: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            color: white;
         }
 
-        .btn-info { background-color: #1a2a6c; color: white; }
-        .btn-ops { background-color: #28a745; color: white; }
+        .btn-info { background-color: #1a2a6c; }
+        .btn-ops { background-color: #28a745; }
 
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+        .btn:hover { transform: scale(1.05); filter: brightness(1.2); }
 
+        /* Footer en la parte inferior de la tarjeta */
         .footer { 
-            margin-top: 4vh; 
-            font-size: 0.9rem; 
+            font-size: clamp(14px, 1.2vw, 20px); 
             color: #888;
-            border-top: 1px solid #eee;
-            padding-top: 2vh;
+            border-top: 2px solid #eee;
             width: 100%;
+            padding-top: 20px;
+            text-align: center;
         }
 
-        /* Ajuste para tablets/celulares */
-        @media (max-width: 768px) {
-            .main-card { height: auto; max-height: none; padding: 40px 20px; }
-            .logo { height: 100px; }
-            .btn-container { flex-direction: column; }
+        /* Ajuste para que no se vea mal en celulares pequeños */
+        @media (max-width: 900px) {
+            .btn-row { flex-direction: column; gap: 15px; }
+            .full-screen-card { height: auto; min-height: 95vh; }
         }
     </style>
 </head>
 <body>
 
-    <div class="main-card">
+    <div class="full-screen-card">
         <img src="logo.png" alt="M & G GROUP" class="logo">
         
         <h1>M & G GROUP DEL PERU S.A.C.</h1>
-        <p>Expertos en Ingeniería, Construcción y Soluciones Integrales para proyectos de alta complejidad.</p>
+        <p>Expertos en Ingeniería, Construcción y Soluciones Integrales</p>
         
-        <div class="btn-container">
-            <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📧 info@mg-group.com.pe</a>
+        <div class="btn-row">
+            <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📩 info@mg-group.com.pe</a>
             <a href="mailto:operaciones@mg-group.com.pe" class="btn btn-ops">⚙️ operaciones@mg-group.com.pe</a>
         </div>
 
