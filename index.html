@@ -5,122 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M & G GROUP DEL PERU S.A.C.</title>
     <style>
-        /* RESET TOTAL: Sin márgenes ni espacios muertos */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body, html { 
-            width: 100%;
-            height: 100%;
-            background-color: #f0f2f5; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-            overflow: hidden; /* Evita que aparezcan barras de desplazamiento */
+        /* CONFIGURACIÓN GENERAL */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
         }
 
-        /* EL RECTÁNGULO MAESTRO: Ajustado al 95% de la PC */
-        .full-screen-card { 
-            background: #ffffff; 
-            width: 95vw;    /* Ocupa el 95% del ancho de la ventana */
-            height: 90vh;   /* Ocupa el 90% del alto de la ventana */
+        /* CABECERA: LOGO ALINEADO AL TEXTO */
+        header {
+            padding: 20px 0;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-brand {
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly; /* Distribuye el contenido a lo largo de todo el alto */
             align-items: center;
-            padding: 40px;
-            border-radius: 25px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            border-left: 20px solid #1a2a6c; /* Franja lateral imponente */
-            border-right: 20px solid #1a2a6c; /* Doble franja para equilibrio horizontal */
+            width: fit-content; /* Se ajusta al ancho del texto */
         }
 
-        /* Logo adaptado al alto de la pantalla */
-        .logo { 
-            max-height: 25vh; 
-            width: auto;
-            max-width: 80%;
+        .header-brand img {
+            width: 100%; /* El logo toma el ancho del contenedor (el texto) */
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
         }
 
-        /* Título que se ajusta al ancho */
-        h1 { 
-            color: #1a2a6c; 
-            font-size: clamp(30px, 5vw, 60px); 
-            text-transform: uppercase;
-            font-weight: 900;
-            letter-spacing: 2px;
-        }
-
-        /* Subtítulo grande y claro */
-        p { 
-            color: #444; 
-            font-size: clamp(20px, 2.5vw, 35px); 
-            font-weight: 500;
-        }
-
-        /* BOTONES HORIZONTALES GIGANTES */
-        .btn-row {
-            display: flex;
-            width: 100%;
-            max-width: 1200px;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        .btn { 
-            text-decoration: none; 
-            padding: 30px 40px; 
-            border-radius: 15px; 
-            font-weight: bold; 
-            font-size: clamp(18px, 1.8vw, 24px); 
-            transition: 0.4s;
-            flex: 1; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            color: white;
-        }
-
-        .btn-info { background-color: #1a2a6c; }
-        .btn-ops { background-color: #28a745; }
-
-        .btn:hover { transform: scale(1.05); filter: brightness(1.2); }
-
-        /* Footer en la parte inferior de la tarjeta */
-        .footer { 
-            font-size: clamp(14px, 1.2vw, 20px); 
-            color: #888;
-            border-top: 2px solid #eee;
-            width: 100%;
-            padding-top: 20px;
+        .header-brand h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            letter-spacing: 1px;
+            white-space: nowrap; /* Evita que el texto se rompa */
             text-align: center;
         }
 
-        /* Ajuste para que no se vea mal en celulares pequeños */
-        @media (max-width: 900px) {
-            .btn-row { flex-direction: column; gap: 15px; }
-            .full-screen-card { height: auto; min-height: 95vh; }
+        /* SECCIÓN PRINCIPAL (HERO) - DISEÑO DIVIDIDO */
+        .main-banner {
+            height: 75vh;
+            position: relative;
+            /* Fondo dividido: Izquierda Edificios / Derecha Fábricas */
+            background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                        url('tu-foto-edificios.jpg') left no-repeat,
+                        url('tu-foto-fabricas.jpg') right no-repeat;
+            background-size: cover, 50% 100%, 50% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .banner-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-block;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
+            transform: translateY(-3px);
+        }
+
+        /* BARRA DE GARANTÍA */
+        .info-bar {
+            background: #0056b3;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .info-bar span {
+            margin: 0 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        /* PIE DE PÁGINA ACTUALIZADO */
+        .site-footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        .site-footer p {
+            font-size: 14px;
+            margin: 0;
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
 <body>
 
-    <div class="full-screen-card">
-        <img src="logo.png" alt="M & G GROUP" class="logo">
-        
-        <h1>M & G GROUP DEL PERU S.A.C.</h1>
-        <p>Expertos en Ingeniería, Construcción y Soluciones Integrales</p>
-        
-        <div class="btn-row">
-            <a href="mailto:info@mg-group.com.pe" class="btn btn-info">📩 info@mg-group.com.pe</a>
-            <a href="mailto:operaciones@mg-group.com.pe" class="btn btn-ops">⚙️ operaciones@mg-group.com.pe</a>
+    <header>
+        <div class="header-brand">
+            <img src="logo.png" alt="M & G Group Logo">
+            <h1>M & G GROUP DEL PERU S.A.C.</h1>
         </div>
+    </header>
 
-        <div class="footer">
-            <p>M & G Group del Perú © Copyright 2025 Todos los derechos reservados.</p>
+    <section class="main-banner">
+        <div class="banner-content">
+            <h2>Ingeniería experta para corregir, construir y proteger.</h2>
+            <a href="https://wa.me/51946094596?text=Hola%20M%20&%20G%20GROUP,%20deseo%20solicitar%20una%20inspección%20técnica." 
+               class="btn-whatsapp" target="_blank">
+               SOLICITAR INSPECCIÓN TÉCNICA
+            </a>
         </div>
-    </div>
+    </section>
+
+    <section class="info-bar">
+        <span>🛡️ Calidad Certificada</span>
+        <span>⏱️ Cumplimiento de Plazos</span>
+        <span>🏗️ Soporte Post-Venta</span>
+    </section>
+
+    <footer class="site-footer">
+        <p>M & G Group del Perú © Copyright 2025 Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
