@@ -5,23 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M & G GROUP DEL PERU S.A.C.</title>
     <style>
-        * { box-sizing: border-box; }
-
-        body, html {
+        /* Reset de estilos para evitar márgenes raros */
+        * {
             margin: 0;
             padding: 0;
-            height: 100vh;
-            width: 100vw;
-            overflow: hidden; /* Mantiene todo en una sola pantalla */
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #ffffff; /* Fondo blanco para que el logo resalte */
-            display: flex;
-            flex-direction: column;
+            box-sizing: border-box;
         }
 
-        /* CONTENEDOR PRINCIPAL */
-        .main-wrapper {
-            flex: 1;
+        body, html {
+            height: 100vh; /* Altura total de la pantalla */
+            width: 100vw;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #ffffff;
+            overflow: hidden; /* Prohibido el scroll para que no se parta */
+            display: flex;
+            flex-direction: column; /* Organiza los elementos en columna de arriba a abajo */
+        }
+
+        /* CONTENEDOR CENTRAL (LOGO + TEXTO + BOTÓN) */
+        .main-content {
+            flex: 1; /* Ocupa todo el espacio central disponible */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -30,96 +33,100 @@
             padding: 20px;
         }
 
-        /* LOGO EN LA PARTE SUPERIOR */
-        .logo-container img {
-            max-width: 350px; /* Tamaño del logo */
-            width: 100%;
-            height: auto;
+        /* AJUSTE DEL LOGO */
+        .logo-box img {
+            max-height: 40vh; /* El logo no ocupará más del 40% de la altura de la pantalla */
+            width: auto;
+            display: block;
             margin-bottom: 20px;
         }
 
-        /* TEXTO DEBAJO DEL LOGO */
-        .content h1 {
-            font-size: 2rem;
+        /* TEXTOS DEBAJO DEL LOGO */
+        .brand-name {
+            font-size: 2.2rem;
             color: #333;
-            margin: 0 0 10px 0;
+            font-weight: bold;
             text-transform: uppercase;
+            margin-bottom: 10px;
         }
 
-        .content h2 {
-            font-size: 1.3rem;
+        .slogan {
+            font-size: 1.4rem;
             color: #666;
-            font-weight: 400;
             margin-bottom: 30px;
         }
 
-        .btn-whatsapp {
+        /* BOTÓN WHATSAPP */
+        .btn-ws {
             background-color: #25d366;
             color: white;
-            padding: 15px 35px;
+            padding: 15px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.2rem;
-            transition: 0.3s;
+            transition: transform 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
-        .btn-whatsapp:hover {
-            background-color: #128c7e;
+        .btn-ws:hover {
             transform: scale(1.05);
         }
 
-        /* PIE DE PÁGINA CON LETRAS AGRANDADAS */
-        .footer-area {
+        /* PIE DE PÁGINA (FOOTER) */
+        footer {
             width: 100%;
+            background-color: #000;
         }
 
-        .info-bar {
-            background: #004a99;
+        .blue-bar {
+            background-color: #004a99;
             color: white;
             padding: 12px 0;
             text-align: center;
-            font-size: 1rem; /* Letras de la barra más grandes */
+            font-size: 1.1rem; /* Letras de iconos más grandes */
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
-        .info-bar span { margin: 0 20px; }
+        .blue-bar span {
+            margin: 0 20px;
+        }
 
-        .site-footer {
-            background: #000;
+        .copyright-bar {
             color: #ffffff;
-            padding: 20px 0;
+            padding: 25px 0; /* Más alto para que se vea importante */
             text-align: center;
-            font-size: 1.1rem; /* Letras de copyright significativamente más grandes */
+            font-size: 1.3rem; /* Letras del copyright mucho más grandes */
             font-weight: 500;
         }
     </style>
 </head>
 <body>
 
-    <div class="main-wrapper">
-        <div class="logo-container">
+    <div class="main-content">
+        <div class="logo-box">
             <img src="logo.png" alt="M & G Group Logo">
         </div>
-
-        <div class="content">
-            <h1>M & G GROUP DEL PERU S.A.C.</h1>
-            <h2>Ingeniería experta para corregir y construir.</h2>
-            <a href="https://wa.me/51946094596" class="btn-whatsapp">
-                CONTACTAR POR WHATSAPP
-            </a>
-        </div>
+        
+        <h1 class="brand-name">M & G GROUP DEL PERU S.A.C.</h1>
+        <p class="slogan">Ingeniería experta para corregir y construir.</p>
+        
+        <a href="https://wa.me/51946094596" class="btn-ws">
+            CONTACTAR POR WHATSAPP
+        </a>
     </div>
 
-    <div class="footer-area">
-        <div class="info-bar">
-            <span>🛡️ CALIDAD</span> <span>⏱️ PLAZOS</span> <span>🏗️ POST-VENTA</span>
+    <footer>
+        <div class="blue-bar">
+            <span>🛡️ CALIDAD</span> 
+            <span>⏱️ PLAZOS</span> 
+            <span>🏗️ POST-VENTA</span>
         </div>
-        <footer class="site-footer">
+        <div class="copyright-bar">
             M & G Group del Perú © Copyright 2025 Todos los derechos reservados.
-        </footer>
-    </div>
+        </div>
+    </footer>
 
 </body>
 </html>
