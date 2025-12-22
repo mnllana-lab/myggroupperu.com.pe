@@ -5,55 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M & G GROUP DEL PERU S.A.C.</title>
     <style>
-        /* Estilo para que todo quepa en una sola pantalla sin scroll */
+        /* Ajuste para que todo quepa en una sola pantalla */
+        * { box-sizing: border-box; }
+        
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden; /* Evita el scroll si la pantalla es pequeña */
-            font-family: Arial, sans-serif;
+            height: 100vh; /* Altura total de la ventana */
+            width: 100vw;
+            overflow: hidden; /* Elimina el scroll */
             display: flex;
             flex-direction: column;
+            font-family: 'Segoe UI', Arial, sans-serif;
         }
 
-        /* HEADER: Logo y Texto alineados */
+        /* HEADER: Logo y Texto alineados horizontalmente */
         header {
-            padding: 10px 0;
+            flex: 0 0 auto; /* No se estira */
+            padding: 15px 0;
             background: white;
-            flex-shrink: 0;
             display: flex;
             justify-content: center;
         }
 
         .header-brand {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: fit-content;
+            display: inline-block;
+            text-align: center;
         }
 
         .header-brand img {
-            width: 100%; /* Logo del mismo largo que el texto */
+            width: 100%; /* Toma el ancho del contenedor de texto */
+            max-width: 350px; /* Tamaño máximo sugerido */
             height: auto;
-            max-height: 80px; /* Evita que el logo sea gigante */
             display: block;
+            margin: 0 auto 5px auto;
         }
 
         .header-brand h1 {
-            margin: 5px 0 0 0;
-            font-size: 1.2rem;
+            margin: 0;
+            font-size: 1.1rem;
             color: #333;
-            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap; /* Mantiene el texto en una línea */
         }
 
-        /* BANNER: Sección central ajustada */
+        /* BANNER CENTRAL: Se ajusta al espacio disponible */
         .main-banner {
-            flex-grow: 1; /* Toma el espacio sobrante */
+            flex: 1 1 auto; /* Toma el espacio sobrante */
             position: relative;
-            background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                        url('tu-foto-edificios.jpg') left no-repeat,
-                        url('tu-foto-fabricas.jpg') right no-repeat;
-            background-size: cover, 50% 100%, 50% 100%;
+            background: #666; /* Color de respaldo */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -61,10 +62,15 @@
             text-align: center;
         }
 
+        .banner-content {
+            padding: 20px;
+            z-index: 2;
+        }
+
         .banner-content h2 {
-            font-size: 1.8rem;
-            margin: 0 20px 15px 20px;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
         .btn-whatsapp {
@@ -78,26 +84,29 @@
             transition: 0.3s;
         }
 
-        /* FOOTER Y BARRA: Compactos al final */
+        /* ÁREA INFERIOR: Barra azul y Footer */
         .bottom-area {
-            flex-shrink: 0;
-            text-align: center;
-            background: #1a1a1a;
-            color: white;
+            flex: 0 0 auto; /* Se mantiene al fondo */
+            width: 100%;
         }
 
         .info-bar {
-            background: #0056b3;
+            background: #004a99;
+            color: white;
             padding: 8px 0;
-            font-size: 0.8rem;
+            text-align: center;
+            font-size: 0.75rem;
             font-weight: bold;
         }
 
-        .info-bar span { margin: 0 10px; }
+        .info-bar span { margin: 0 15px; }
 
         .site-footer {
+            background: #111;
+            color: #fff;
             padding: 10px 0;
-            font-size: 0.75rem;
+            text-align: center;
+            font-size: 0.7rem;
         }
     </style>
 </head>
