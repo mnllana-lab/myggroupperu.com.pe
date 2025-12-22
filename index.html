@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M & G GROUP DEL PERU S.A.C.</title>
     <style>
-        /* CONFIGURACIÓN GENERAL */
+        /* Estilo para que todo quepa en una sola pantalla sin scroll */
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
+            height: 100%;
+            overflow: hidden; /* Evita el scroll si la pantalla es pequeña */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
         }
 
-        /* CABECERA: LOGO ALINEADO AL TEXTO */
+        /* HEADER: Logo y Texto alineados */
         header {
-            padding: 20px 0;
-            background-color: #ffffff;
+            padding: 10px 0;
+            background: white;
+            flex-shrink: 0;
             display: flex;
             justify-content: center;
         }
@@ -25,31 +29,28 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: fit-content; /* Se ajusta al ancho del texto */
+            width: fit-content;
         }
 
         .header-brand img {
-            width: 100%; /* El logo toma el ancho del contenedor (el texto) */
+            width: 100%; /* Logo del mismo largo que el texto */
             height: auto;
+            max-height: 80px; /* Evita que el logo sea gigante */
             display: block;
-            margin-bottom: 10px;
         }
 
         .header-brand h1 {
-            margin: 0;
-            font-size: 24px;
+            margin: 5px 0 0 0;
+            font-size: 1.2rem;
             color: #333;
-            letter-spacing: 1px;
-            white-space: nowrap; /* Evita que el texto se rompa */
-            text-align: center;
+            white-space: nowrap;
         }
 
-        /* SECCIÓN PRINCIPAL (HERO) - DISEÑO DIVIDIDO */
+        /* BANNER: Sección central ajustada */
         .main-banner {
-            height: 75vh;
+            flex-grow: 1; /* Toma el espacio sobrante */
             position: relative;
-            /* Fondo dividido: Izquierda Edificios / Derecha Fábricas */
-            background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+            background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
                         url('tu-foto-edificios.jpg') left no-repeat,
                         url('tu-foto-fabricas.jpg') right no-repeat;
             background-size: cover, 50% 100%, 50% 100%;
@@ -61,57 +62,42 @@
         }
 
         .banner-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            font-size: 1.8rem;
+            margin: 0 20px 15px 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
         }
 
         .btn-whatsapp {
             background-color: #25d366;
             color: white;
-            padding: 15px 30px;
+            padding: 12px 25px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
             display: inline-block;
-            transition: 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
         }
 
-        .btn-whatsapp:hover {
-            background-color: #128c7e;
-            transform: translateY(-3px);
+        /* FOOTER Y BARRA: Compactos al final */
+        .bottom-area {
+            flex-shrink: 0;
+            text-align: center;
+            background: #1a1a1a;
+            color: white;
         }
 
-        /* BARRA DE GARANTÍA */
         .info-bar {
             background: #0056b3;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
+            padding: 8px 0;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
 
-        .info-bar span {
-            margin: 0 15px;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
+        .info-bar span { margin: 0 10px; }
 
-        /* PIE DE PÁGINA ACTUALIZADO */
         .site-footer {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            padding: 30px 0;
-            text-align: center;
-            border-top: 1px solid #333;
-        }
-
-        .site-footer p {
-            font-size: 14px;
-            margin: 0;
-            letter-spacing: 0.5px;
+            padding: 10px 0;
+            font-size: 0.75rem;
         }
     </style>
 </head>
@@ -119,30 +105,28 @@
 
     <header>
         <div class="header-brand">
-            <img src="logo.png" alt="M & G Group Logo">
+            <img src="logo.png" alt="Logo M & G Group">
             <h1>M & G GROUP DEL PERU S.A.C.</h1>
         </div>
     </header>
 
     <section class="main-banner">
         <div class="banner-content">
-            <h2>Ingeniería experta para corregir, construir y proteger.</h2>
-            <a href="https://wa.me/51946094596?text=Hola%20M%20&%20G%20GROUP,%20deseo%20solicitar%20una%20inspección%20técnica." 
-               class="btn-whatsapp" target="_blank">
-               SOLICITAR INSPECCIÓN TÉCNICA
+            <h2>Ingeniería experta para corregir y construir.</h2>
+            <a href="https://wa.me/51946094596" class="btn-whatsapp">
+                CONTACTAR POR WHATSAPP
             </a>
         </div>
     </section>
 
-    <section class="info-bar">
-        <span>🛡️ Calidad Certificada</span>
-        <span>⏱️ Cumplimiento de Plazos</span>
-        <span>🏗️ Soporte Post-Venta</span>
-    </section>
-
-    <footer class="site-footer">
-        <p>M & G Group del Perú © Copyright 2025 Todos los derechos reservados.</p>
-    </footer>
+    <div class="bottom-area">
+        <div class="info-bar">
+            <span>🛡️ CALIDAD</span> <span>⏱️ PLAZOS</span> <span>🏗️ POST-VENTA</span>
+        </div>
+        <footer class="site-footer">
+            <p>M & G Group del Perú © Copyright 2025 Todos los derechos reservados.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
